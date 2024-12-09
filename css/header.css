@@ -1,0 +1,193 @@
+/*************** Menu ****************/
+
+/* Det her skal stå under alle css - står for et blank planket*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  justify-content: center;
+  display: block;
+  background-color: #365902;
+  position: relative; /* Gør det muligt at placere elementer i forhold til headeren */
+  border-bottom: 2px solid black; /*Danner en sort linje i bunden*/
+}
+
+.inner_header {
+  display: flex;
+  align-items: center; /* Justerer alle elementer i headeren vertikalt */
+  height: 100%; /* Sikrer, at højden er ens for alle elementer */
+  padding: 0 20px; /* Lidt plads til venstre og højre */
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  align-items: center; /* Justerer menupunkterne vertikalt */
+  gap: 20px; /* Afstand mellem menupunkterne */
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 30px;
+  display: block;
+  padding: 10px 0;
+  color: white;
+  font-family: "Emilys Candy", serif;
+}
+
+.menu a:last-child {
+  padding-right: 0;
+}
+
+/*--------------------Blomster Logo-------------------*/
+.inner_header .logo {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  float: left;
+}
+
+/**Her er ændringerne i billedets dimentioner**/
+.inner_header .logo img {
+  width: 72px;
+  height: auto;
+  margin: 10px 0; /*afstand over og under billedet*/
+}
+
+.sidens_navn {
+  text-decoration: none;
+  font-size: 40px;
+  padding: 10px 0;
+  display: block;
+  color: white;
+  font-family: "Emilys Candy", serif;
+  margin: 0 auto; /* Centrerer horisontalt */
+  width: 200px; /* Sæt bredde */
+  text-align: center; /* Centrerer teksten indeni elementet */
+
+  /* Vertikal og horisontal centrering */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/********Hamburger ikonet**********/
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #83a603;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+
+  .sidens_navn {
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px 0;
+    display: block;
+    color: white;
+    font-family: "Emilys Candy", serif;
+    margin: 0 auto; /* Centrerer elementet horisontalt */
+    width: 200px; /* Sæt en ønsket bredde for at kunne centrere det */
+  }
+}
+
+/***animation***/
+ul.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+ul.menu li a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 5px 0;
+}
+
+ul.menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  opacity: 0; /*skjuler stregen til at starte med*/
+  transition: width 0.8s ease, opacity 0.6s ease; /*transition til opacity*/
+}
+
+ul.menu li a:hover::after {
+  width: 100%;
+  opacity: 1; /*gør stregen synlig*/
+}

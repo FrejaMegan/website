@@ -1,0 +1,37 @@
+/************Footer************/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #0d2601;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.inner_footer {
+  font-family: "Roboto";
+  flex: 1;
+  padding: 0 20px;
+  color: white;
+}
+
+.inner_footer p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inner_footer {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

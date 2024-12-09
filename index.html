@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passionssite</title>
+
+    <!--Nu kan det ikke indekseres af søgemaskiner -->
+    <meta name="robots" content="noindex" />
+
+    <!--Link til undersider-->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--Favicon-->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%233d6f09%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2277%22>🌷</text></svg>" />
+
+    <!--Fonde-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <!--Den her div header er selve rammen/kassen af headeren-->
+      <div class="header">
+        <!--Den her div er det som står inde i headeren-->
+        <div class="inner_header">
+          <!--Logoet-->
+          <div class="logo">
+            <img src="billeder/logo.png" width="529" height="486" alt="logo" />
+          </div>
+
+          <div class="sidens_navn">Blomster</div>
+
+          <nav>
+            <!--liste over undersider - sat ind i header-->
+            <ul class="menu">
+              <li><a href="index.html">Menu</a></li>
+            </ul>
+            <div class="burger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!--yderste røde kasse fra layoutdiagrammet-->
+      <section class="hero_section">
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+        <dotlottie-player src="https://lottie.host/19d287bd-9dcf-4574-9d5b-8f0734a39533/aPAY1n7kkV.lottie" background="transparent" speed="0.5" style="width: 1000px; height: 1000px" loop autoplay></dotlottie-player>
+      </section>
+
+      <!--yderste røde kasse fra layoutdiagrammet-->
+      <section class="grid_1-1">
+        <div class="div_1">
+          <h1>Lenes Blomster World</h1>
+          <h2>En passion for blomster</h2>
+          <p>"Blomster betyder glæde, jeg kigger ikke på blomster på en sørgelig måde. Det er stadigvæk glæde. Det betyder respekt venskab og kærlighed. Blomster betyder bryllupper, fødselsdage, årsdag, fri. Til den du elsker og i sidste ende til den du elskede. Så blomster betyder rigtig meget. På mørke aftner gør blomster dig glad - med en kop kaffe. Det betyder rigtig meget for mig. Når jeg om sommeren cykler rundt og rundt. Kigger jeg i alle haver - jeg kan ikke lade vær. Normalt skal man ikke stå og glo på dem, men nogle gange tænker jeg bare - wow nogle flotte blomster." - Mandana ejer af Lenes Blomster World</p>
+        </div>
+        <div class="img-w-txt">
+          <img src="billeder/alle_blomster.png" alt="alle_blomster" />
+          <p>Blomster er små vidundere, der fanger øjet og rører hjertet</p>
+        </div>
+      </section>
+
+      <!--yderste røde kasse fra layoutdiagrammet-->
+      <section class="Underoverskift">
+        <h2>Farverig symfoni af naturens skønhed.</h2>
+        <div class="grid_1-1-1">
+          <div class="lodret_billede">
+            <img src="billeder/lodret_billede.png" alt="lodret_billede" />
+          </div>
+
+          <div class="orange_blomst">
+            <img src="billeder/orange_blomst.png" alt="orange_blomst" />
+          </div>
+
+          <div class="blomster_vase">
+            <img src="billeder/blomster_vase.png" alt="blomster_vase" />
+          </div>
+
+          <div class="gerbera_blomst">
+            <img src="billeder/gerbera_blomst.png" alt="gerbera_blomst" />
+          </div>
+        </div>
+      </section>
+
+      <!--yderste røde kasse fra layoutdiagrammet-->
+      <section class="Underoverskift">
+        <h2>Et indblik i floristens verden</h2>
+        <div class="grid_1-1">
+          <video src="video/passionvideo.mp4" controls type="video/mp4"></video>
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/MrrCYScTmCY?si=LZzvg4tZEffAtvA9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> </iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="inner_footer">
+          <p>Lavet af Freja Megan</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--JavaScript for at vise/skjule menuen-->
+    <script src="js/menu.js"></script>
+  </body>
+</html>
